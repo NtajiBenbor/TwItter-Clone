@@ -1,0 +1,715 @@
+/* ====GENERAL STYLES==== */
+html{
+    font-size: 62.5%;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+
+}
+
+:root {
+    --page-background: #101010;
+    --page-color: #ffffff;
+    --body-font-size: 1.5rem;
+    --icon-label-font-size: 1.7rem;
+    --nav-icon-hover-color: #2f2f2f;
+    --secondary-color: #2781e7;
+    --user-id-fontcolor:#71767b;
+    --grid-line-color: #71767b;
+    --component-hover-color: #161616;
+    --space-animation-color:#0095f83a;
+    
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: var(--page-background);
+    color: var(--page-color);
+    font-size: var(--body-font-size);
+    font-family: sans-serif;
+    
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    color: var(--page-color);
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* ====TYPOGRAPHY STYLES==== */
+
+
+.icon-label, 
+.Post-btn,
+.user-name, 
+.header-link,
+.subcribe-btn {
+    font-size: var(--icon-label-font-size);
+    font-weight: 700;
+
+}
+
+.user-name { /* user-profile-info text (username)*/
+    cursor: pointer;
+
+}
+
+.user-id { /* user-profile-info text (user - id) */
+ color: var(--user-id-fontcolor);
+ font-weight: normal;
+ cursor: pointer;
+}
+
+.header-link {
+    color: var(--page-color);
+    text-decoration: none;
+}
+
+.blue-words { /*for all the blue words on the webpage*/
+ color: var(--secondary-color)!important;
+ cursor: pointer;
+}
+
+.grey-words { /*for all the grey words on the webpage*/
+    color: var(--user-id-fontcolor) !important;
+    cursor: pointer;
+   }
+
+.component-title,
+.component-sub-title {
+    font-weight: 700;
+}
+
+.component-title {
+    font-size: 2rem;
+}
+.component-sub-title{
+    font-size: 1.5rem;
+}
+
+.ongoing_space {
+    font-size: .5px !important;
+    font-weight: normal !important;
+}
+/* ====PAGE LAYOUT STYLES==== */
+
+.container {  /* parent layout container of the webpage*/
+ width: 95%;
+ display: flex;
+ margin: 0 auto;
+ height: 100%;
+ position: relative;
+
+}
+
+
+.right-column { /* right container (NAV)*/
+    width: 22%;
+
+}
+
+.center-column { /* Center container (MAIN)*/
+    width: 50%;
+    margin-left: auto;
+    border-left: .5px solid var(--grid-line-color);
+    border-right: .5px solid var(--grid-line-color);
+    position: relative;
+}
+
+.left-column { /* leftt container (ASIDE)*/
+    width: 27%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ====MAIN  STYLES==== */
+
+/* == Right nivigation panel styles==  */
+.right-column { /* right container (NAV)*/
+    position: fixed;
+    height: inherit;
+    padding: 1em 1.5em;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.site-title { /* X title icon*/
+    margin-bottom: .6em;
+    margin-left: .5em;
+    width: 35px;
+    height: 35px;
+    transform: translateY(-2px);
+    
+}
+
+.icon_label-wrapper { /* Icon and icon label wrapper*/
+    display: flex;
+    width: 70%;
+    margin-bottom: .2em;
+    padding:0 0 0 .5em;
+    align-items: center;
+    justify-content: flex-start;
+    transition: .3s ease;
+}
+
+.icon_label-wrapper:hover,
+.icon_label-wrapper:focus,
+.site-title:hover,
+.profile-wrapper:hover  { /* Icon and icon label wrapper hover-state*/
+    border-radius: 50px;
+    background-color: var(--nav-icon-hover-color);
+    cursor: pointer;
+    
+}
+
+.nav-icon { /* Navigation Icon*/
+    margin-right: 1.5em;
+    
+    
+}
+
+.icon-label { /* Navigation icon text*/
+    transform: translateY(8px);
+    margin-top: 0;
+    padding: 5px 0;
+    align-self: center;
+    
+}
+
+.Post-btn { /* Post Button */
+    width: 80%;
+    padding: .9em;
+    border-radius: 50px;
+    margin-bottom: 1em;
+    transform: translateY(12px);
+
+
+}
+
+.Post-btn:hover { /* Post Button hover state*/
+ cursor: pointer;
+}
+
+
+
+.profile-wrapper { /* User-profile-info wrapper */
+ display: flex;
+ padding: .6em .4em;
+ justify-content: flex-start;
+ transform: translateY(10px);
+ 
+ 
+}
+
+.profile-pic { /* User-profile-picture */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: .5em;
+    cursor: pointer;
+}
+
+
+
+.username_user-id-wrapper p { /* username and user id paragraps*/
+    padding: 0;
+    margin: 0;
+    margin-left: 1em;
+}
+
+.More-icon { /* username and user id more-icon*/
+    width: 20px;
+    height: 20px;
+    transform: translate(45px, 10px);
+}
+
+
+
+
+
+
+
+
+
+/*== Center Column styles==  */
+/* Header styles */
+.header { /* MAIN Grid container for home and feed-page */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row;
+    grid-auto-rows: 55px;
+    position: sticky;
+    top: 0;
+    background-color: var(--page-background), transparent;
+    backdrop-filter: blur(40px) brightness(20%);
+    z-index: 5;
+    
+}
+
+.home {  /*  .home element */
+    grid-column: 1 / -1;
+    
+}
+
+.home p {  /*  style for home paragarah element */
+    transform: translate(25px, 5px);
+}
+
+.feed-page { /* secondary Grid container (for_you) and (following) */
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.for_you,
+.following { /* text align for following and for_you */
+    text-align: center;
+    border-bottom: .5px solid var(--grid-line-color);
+    padding: 0;
+    transition: .3s ease;   
+}
+
+.for_you:hover,
+.following:hover { /*  following and for_you hover state */
+    background-color: rgb(47, 47, 47, 0.5);
+    cursor: pointer;
+}
+
+
+.for_you p,
+.following p { /*  styles for the link paragarph elements */
+    transform: translateY(10px);
+}
+
+
+.current-page { /*  current link */
+    padding: 0;
+    padding-bottom: .4em;
+    border-bottom: 3px solid var(--secondary-color);
+    border-radius: 0 0 1.5px 1.5px;
+}
+
+
+
+/* ==user tweet section== */
+
+.tweet-section { /* user tweet section wrapper*/
+    padding: 1.2em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: .5px solid var(--grid-line-color);
+    position: relative;
+    z-index: 4;
+}
+
+.tweet-input-wrapper { /* user tweet section flex container for profile picture and input box*/
+    display: flex;
+    width: 100%;
+}
+
+.tweet-image-container{ /* user profile picture container*/
+    width: 10%;
+    margin-right: 1em;
+    
+}
+
+.tweet-input-wrapper img { /* user profile picture*/
+    width: 45px;
+    height: 45px;
+    margin: 0;
+}
+
+.tweet-form { /* user tweet form element */
+    width: 90%;
+}
+
+.user-tweet-input { /* user tweet input(type=text) element */
+    width: 100%;
+    background-color: inherit;
+    padding: 1.5em .5em;
+    color: var(--user-id-fontcolor);
+    font-size: 2rem;
+    cursor: text;
+    border: 0;
+    outline: none;
+}
+
+.tweet-modifiers { /* flex container for tweet modifier icons and post button*/
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tweet-icon-container { /* flex container for tweet modifier icons*/
+    display: inline-flex;
+    padding: 0;  
+}
+
+.tweet-icon-container  img { /* tweet modifier icons styles*/
+    width: 35px;
+    height: 35px;
+    padding: .4em;
+    margin: 0 ;
+    margin-left: .1em;
+    border-radius: 50%;
+    transition: .3s ease;
+
+}
+
+.tweet-icon-container img:hover,
+.post-icon:hover { /* tweet modifier icon hover state*/
+    background-color: var(--nav-icon-hover-color);
+    cursor: pointer;
+}
+
+.tweet-btn { /* Post button styles*/
+    width: 15%;
+    padding: .5em;
+    border-radius: 50px;
+}
+
+
+
+/* == other users posts section styles== */
+
+/*styles for the suggested topic paragraph */
+.suggestions { /*suggested topic styles*/
+    display: inline-flex;
+    margin-left: 1.3em;
+    margin-bottom: 0;
+    padding-bottom: 1.5em;
+    
+}
+
+.post-icon { /*suggested topic icon styles*/
+    width: 20px;
+    height: 20px;
+    padding: .2em;
+    margin-right: .5em;
+    border-radius: 50%;
+    position: relative;
+    
+}
+
+/* styles for flex-Container, posters profile-pic and POSts */
+
+.post-container { /* FLEX Container for posters prfile pic and POSts */
+    display: flex;
+}
+
+.poster-image-container { /* Container for posters prfile pic */
+    width: 10%;
+}
+
+.post-details { /* Container for poster Username and user-id and POSts */
+    width: 90%;
+}
+
+
+
+.post-details p { /*styles for both paragraphs within the post details div */
+    margin: 0;
+    padding-bottom: .5em;
+}
+
+.poster-id { /*USERNAME & USER_ID */
+   display: inline-flex;
+   width: 100%;
+}
+
+.poster-id > img { /*more dot icon */
+    margin-left: auto;
+}
+
+.poster-id > .user-id {
+    margin-left: .5em;
+}
+
+
+/* styles for the post details image */
+
+.post-image-container { /*POST IMAGE CONTAINER */
+    display: flex;
+    position: relative;
+}
+
+.post-image { /*POST IMAGE*/
+    width: 50%;
+    height: 375px;
+    object-fit: cover;
+    position: relative;
+    border-radius: 25px 0 0 25px;
+    z-index: 3;
+    
+}
+
+.left-image {
+    border-radius: 0px 25px 25px 0px;
+}
+
+.post-image:hover {
+    cursor: pointer;
+}
+
+.post_interactions { /*POST interactions CONTAINER */
+    display: flex;
+    justify-content: space-evenly;
+    margin: .5em 0;
+    transform: translateY(5px);
+}
+
+.post_interactions img { /*POST interactions icons */
+    transform: scale(1.4);
+}
+
+
+
+
+
+
+
+/*== left Column styles==  */
+.left-column {
+    position: relative;
+}
+
+.left-column-header { /* left-column header */
+    position: sticky;
+    top: 0;
+    padding: .5em 1em;
+    background-color: var(--page-background);
+    backdrop-filter: blur(40px) opacity(1.7);
+    z-index: 5;
+
+}
+
+.left-column-header input { /* left-column search bar */
+    width: 100%;
+    background-color: var(--nav-icon-hover-color);
+    border-radius: 50px;
+    border: none;
+    padding: 1.1em 1.1em 1.1em 5em;
+    outline: var(--secondary-color);
+    color: var(--page-color);
+    margin-left: 1em;
+
+} 
+
+.left-column-header img { /* left-column search bar icon */
+    position: absolute;
+    transform: scale(1.5);
+    top: 20px;
+    left: 60px;
+}
+
+
+/* COMPONENTS container section */
+
+.components_container { /* component container */
+    display: flex;
+    flex-direction: column;
+    padding: .5em;
+    padding-left: 2em;
+    position: sticky;
+    top: 0;
+    gap: 1em;
+}
+
+.component { /* COMPONENT style*/
+    width: 100%;
+    background-color: var(--nav-icon-hover-color);
+    border-radius: 20px;
+    padding: .8em 1em;
+    margin: 0 auto;
+
+}
+
+.subcribe-btn { /* subcribtion component button*/
+    border-radius: 25px;
+    padding: .8em ;
+    
+    
+}
+
+/* SPACES component styles */
+
+.space-host {
+    transform: scale( .6) translate(-2px, -20px);
+}
+
+.live-sapces {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.space-topic {
+    width: 60%;
+}
+
+/* other spaces style this include styles for other host pics */
+.other-spaces {
+    border: 2px solid var(--space-animation-color);
+    width:40%;
+    height: fit-content;
+    display: flex;
+    border-radius: 20px;
+    transform: translateY(40px);
+    position: relative;
+    /* z-index: 1; */
+    
+
+}
+
+.glow, .glow-2 {
+    position: absolute;
+    width: 115px;
+    height: 50px;
+    border: 3px solid var(--space-animation-color);
+    padding: 4em;
+    border-radius: 20px;
+    top: -5px;
+    left: -3px;
+    z-index: -1;
+    animation: border_glow 2.5s ease-in-out infinite;
+
+}
+
+.glow-2 {
+ animation-delay: 1s;
+}
+
+.other-host {
+    transform: scale(1.1);
+    border: 1px solid black;
+    position: relative;
+    /* z-index: -1; */
+
+}
+
+/* spaces typography */
+.space-host-status {
+    font-size: 1.4rem;
+    font-weight: 700;
+    
+}
+
+.space-host-status p > span {
+    color: var(--user-id-fontcolor);
+    font-weight: normal;
+}
+
+
+/* TRENDS COMPONENT STYLE */
+
+.trending_component {
+    padding: 0;
+}
+
+.trending_component .component-title,
+.trending_component .blue-words {
+    margin: 1em;
+}
+.trending-topic {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em;
+    transition: .3s ease;
+}
+
+.trending-topic > div > p {
+    padding: 0;
+    margin: 1em 0;
+}
+
+
+.trending-topic:hover {
+    background-color: var(--component-hover-color);
+    cursor: pointer;
+
+}
+
+/* WHO_TO_FOLLOW COMPONENT STYLE */
+
+.suggested_follows { 
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1em;
+    
+}
+
+
+.follower_pic {
+    transform: translateX(-22px);
+}
+
+.follow_id_wrapper {
+    display: flex;
+}
+
+.follow_id {
+    transform: translate(-15px, -10px);
+}
+
+.follow_btn {
+    border-radius: 20px;
+    padding: .5em;
+    height: 30px;
+    width: 30%;
+    border: none;
+    color: var(--page-background);
+    background-color: var(--page-color);
+    font-weight: 700;
+    transform: translateX(12px);
+}
+
+
+
+/* ====MEDIA QUERY STYLES==== */
+
+
+
+/* ====ANIMATION==== */
+
+@keyframes border_glow {  /* ====spaces component animation==== */
+    
+    from {
+        transform: scale(.9);
+        border-color: transparent;
+    }
+
+    to {
+        transform: scale(1);
+        
+    }
+}

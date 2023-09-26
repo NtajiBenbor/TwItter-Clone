@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A clone of Twitter Web app UI">
+    <meta name="keywords" content="Twitter, Clone, Feed, Trend, tweets">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Clone</title>
+    <link rel="stylesheet" href="./CSS/Styles.css">
+</head>
+<body>
+    <div class="container"><!-- Main container start -->
+
+
+
+
+        <nav class="right-column columns"><!-- Right nivigation panel -->
+            <img class="site-title icon" src="/img/twitterx--v2.png" alt="X icon">
+            
+            <article class="icon_label-wrapper"><!-- Icon and icon label wrapper (HOME) -->
+                <img class="nav-icon icon" src="/img/icons8-twitter-home-48.png" alt="Home icon">
+                <p class="icon-label">Home</p>
+            </article>
+
+            <article class="icon_label-wrapper"><!-- Icon and icon label wrapper (EXPLORE) -->
+                <img class="nav-icon icon" src="/img/icons8-search-52.svg" alt="Search icon">
+                <p class="icon-label">Explore</p>
+            </article>
+
+            <article class="icon_label-wrapper"><!-- Icon and icon label wrapper (NOTIFICATION) -->
+                <img class="nav-icon icon" src="/img/icons8-notification-64.png" alt="Bell icon">
+                <p class="icon-label">Notifications</p>
+            </article>
+
+            <article class="icon_label-wrapper"><!-- Icon and icon label wrapper (Messages) -->
+                <img class="nav-icon icon" src="/img/icons8-urgent-message-52.png" alt="Message icon">
+                <p class="icon-label">Messages</p>
+            </article>
+
+            <article class="icon_label-wrapper"><!-- Icon and icon label wrapper (List) -->
+                <img class="nav-icon icon" src="/img/icons8-bulleted-list-52.png" alt="List icon">
+                <p class="icon-label">List</p>
+            </article>
+
+            <article class="icon_label-wrapper"><!-- Icon and icon label wrapper (Communities) -->
+                <img class="nav-icon icon" src="/img/icons8-group-52.png" alt="Communities icon">
+                <p class="icon-label">Communities</p>
+            </article>
+
+            <article class="icon_label-wrapper"><!-- Icon and icon label wrapper (Verified) -->
+                <img class="nav-icon icon" src="/img/twitterx--v2.png" alt="X-Verified icon">
+                <p class="icon-label">Verified</p>
+            </article>
+
+            <article class="icon_label-wrapper"><!-- Icon and icon label wrapper (Profile) -->
+                <img class="nav-icon icon" src="/img/icons8-customer-64.png" alt="Profile icon">
+                <p class="icon-label">Profile</p>
+            </article>
+
+            <article class="icon_label-wrapper"><!-- Icon and icon label wrapper (More) -->
+                <img class="nav-icon icon" src="/img/icons8-view-more-52.png" alt="More icon">
+                <p class="icon-label">More</p>
+            </article>
+
+            <button class="Post-btn btn">Post</button> <!-- Post Button -->
+
+                <article class="profile-wrapper"><!-- User-Profile-info wrapper  -->
+                    <img class="profile-pic" src="/img/Snapchat-1081058616.jpg" alt="user profile picture">
+                   <div class="username_user-id-wrapper">
+                    <p class="user-name">Benney.dev</p>
+                    <p class="user-id">@CodewithNtaji</p>
+                   </div>
+                   <img src="/img/icons8-more-52.png" alt="" class="icon More-icon"><!-- username and user id more-icon  -->
+                </article>
+        </nav>
+
+
+
+
+        <main class="center-column columns"><!-- main content panel -->
+            <header class="header"> <!-- Header section starts here(MAIN GRID) -->
+                <div class="home"><p><a class="header-link" href="#">Home</a></p></div>
+                
+                <div class="feed-page"><!-- Container for for .for_you and .following starts here(SECONDARY GRID) -->
+                    <div class="for_you"> <!-- (.for_you GRID-item) -->
+                        <p><a class="header-link current-page" href="#">For You</a></p>
+                    </div>
+                    <div class="following"><!-- (.following GRID-item) -->
+                        <p><a class="header-link" href="#">Following</a></p>
+                    </div>
+                </div>
+            </header>
+
+            <section class="tweet-section">
+                <div class="tweet-input-wrapper"> <!-- tweet-input-wrapper FLEX-CONTAINER -->
+                    <div class="tweet-image-container"><!-- USER-image-CONTAINER -->
+                        <img class="profile-pic" src="/img/Snapchat-1081058616.jpg" alt="user profile picture"> <!-- USER-image -->
+                    </div>
+                    <form action="#" method="post" class="tweet-form"><!--Tweet-form-element -->
+                        <input class="user-tweet-input" name="tweet-post" id="tweet-post" placeholder="What is happening?!"></input> <!--User Tweet Box -->
+                        
+                        <div class="tweet-modifiers">
+                            <div class="tweet-icon-container"><!--container for user image, gif and location icons -->
+                                <img src="/img/icons8-image-52.png" alt="image icon">
+                                <img src="/img/icons8-attach-gif-52.png" alt="gif icon">
+                                <img src="/img/icons8-bulleted-list-52.png" alt=" list icon">
+                                <img src="/img/icons8-happy-52.png" alt=" smiley icon">
+                                <img src="/img/icons8-edit-calendar-52.png" alt="calendar">
+                                <img src="/img/icons8-location-52.png" alt="location">
+                            </div>
+                            <button class="btn tweet-btn">Post</button> <!--post tweet button -->
+                        </div>
+                    </form>
+                </div>
+            </section>
+            
+            <section><!--Other Users tweets and post(User's Feed) -->
+               
+                <article class="tweet-section"><!--FIRST POST -->
+                    <p class="grey-words suggestions">
+                        <img class="post-icon" src="./img/icons8-comment-32.png" alt="comments">Computer programming <span class="blue-words">. see more</span>
+                    </p> <!--Suggested topic paragraph (inline-flex container)-->
+    
+                    <div class="post-container"><!--FLEX Container for posters prfile pic and POSts -->
+                        <div class="poster-image-container"><!-- Container for profile pic -->
+                            <img class="profile-pic" src="/img/pexels-caio-mantovani-16121005.jpg" alt="user profile pic"><!--  profile pic -->
+                        </div>
+    
+    
+                        <div class="post-details"><!-- Container for poster Username and user-id and POSts -->
+                            <p class="user-name poster-id">Matthew Taiwo <span class="user-id">    @mattTaiwo . 19h</span><img class="post-icon"  src="/img/icons8-more-52.png" alt=""></p><!--USERNAME & USER_ID -->
+                            
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusantium id magnam, aspernatur amet laudantium, aperiam laborum libero veniam odit dolorem eius numquam illo debitis, molestiae facere vel ex totam?</p><!--POST TEXT -->
+                            
+                            <div class="post-image-container"><!--POST IMAGE CONTAINER-->
+                                <img class="post-image" src="/img/pexels-matteo-basile-5412641.jpg" alt="">
+                                <img class="post-image left-image" src="/img/pexels-spencer-davis-4388167.jpg" alt=""> <!--POST IMAGE-->
+                            </div>
+    
+                            <div  class="post_interactions"><!--POST interactions CONTAINER (likes, comments, retweets, impressions, share)-->
+                                <img class="post-icon" src="/img/icons8-speech-bubble-52.png" alt="comments icon">
+                                <img class="post-icon" src="/img/icons8-retweet-52.png" alt="retweet icon">
+                                <img class="post-icon" src="/img/icons8-love-52.png" alt=" like icon">
+                                <img class="post-icon" src="/img/icons8-futures-24.png" alt="impression icon">
+                                <img class="post-icon" src="/img/icons8-upload-52.png" alt="share icon">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="tweet-section"><!--SECOND POST -->
+                    <div class="post-container"><!--FLEX Container for posters prfile pic and POSts -->
+                        <div class="poster-image-container"><!-- Container for profile pic -->
+                            <img class="profile-pic" src="/img/base.jpg" alt="user profile pic"><!--  profile pic -->
+                        </div>
+    
+                        <div class="post-details"><!-- Container for poster Username and user-id and POSts -->
+                            <p class="user-name poster-id">Ketut Subi <span class="user-id">   @Subaru_girl . 23min</span><img class="post-icon"  src="/img/icons8-more-52.png" alt=""></p><!--USERNAME & USER_ID -->
+                            
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusantium id magnam, aspernatur amet laudantium, aperiam laborum libero veniam odit dolorem eius numquam illo debitis, molestiae facere vel ex totam?</p><!--POST TEXT -->
+                            
+                            <div  class="post_interactions"><!--POST interactions CONTAINER (likes, comments, retweets, impressions, share)-->
+                                <img class="post-icon" src="/img/icons8-speech-bubble-52.png" alt="comments icon">
+                                <img class="post-icon" src="/img/icons8-retweet-52.png" alt="retweet icon">
+                                <img class="post-icon" src="/img/icons8-love-52.png" alt=" like icon">
+                                <img class="post-icon" src="/img/icons8-futures-24.png" alt="impression icon">
+                                <img class="post-icon" src="/img/icons8-upload-52.png" alt="share icon">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="tweet-section"><!--THIRD POST -->
+                    <div class="post-container"><!--FLEX Container for posters prfile pic and POSts -->
+                        <div class="poster-image-container"><!-- Container for profile pic -->
+                            <img class="profile-pic" src="/img/Snapchat-1223280961.jpg" alt="user profile pic"><!--  profile pic -->
+                        </div>
+    
+    
+                        <div class="post-details"><!-- Container for poster Username and user-id and POSts -->
+                            <p class="user-name poster-id">Joe Apkan <span class="user-id"> @Codewielder . 19min</span><img class="post-icon"  src="/img/icons8-more-52.png" alt=""></p><!--USERNAME & USER_ID -->
+                            
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusantium id magnam, aspernatur amet laudantium, aperiam laborum libero veniam odit dolorem eius numquam illo debitis, molestiae facere vel ex totam?</p><!--POST TEXT -->
+                            
+                            <div class="post-image-container"><!--POST IMAGE CONTAINER-->
+                                <img class="post-image" src="/img/pexels-esranur-kalay-8368409.jpg" alt="">
+                                <img class="post-image left-image" src="/img/pexels-ketut-subiyanto-4349842.jpg" alt=""> <!--POST IMAGE-->
+                            </div>
+    
+                            <div  class="post_interactions"><!--POST interactions CONTAINER (likes, comments, retweets, impressions, share)-->
+                                <img class="post-icon" src="/img/icons8-speech-bubble-52.png" alt="comments icon">
+                                <img class="post-icon" src="/img/icons8-retweet-52.png" alt="retweet icon">
+                                <img class="post-icon" src="/img/icons8-love-52.png" alt=" like icon">
+                                <img class="post-icon" src="/img/icons8-futures-24.png" alt="impression icon">
+                                <img class="post-icon" src="/img/icons8-upload-52.png" alt="share icon">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="tweet-section"><!--FOURTH POST -->
+                    <div class="post-container"><!--FLEX Container for posters prfile pic and POSts -->
+                        <div class="poster-image-container"><!-- Container for profile pic -->
+                            <img class="profile-pic" src="/img/pexels-christina-morillo-1181496.jpg" alt="user profile pic"><!--  profile pic -->
+                        </div>
+    
+                        <div class="post-details"><!-- Container for poster Username and user-id and POSts -->
+                            <p class="user-name poster-id">Blessing Nkem <span class="user-id">   @NkemCodes . 23min</span><img class="post-icon"  src="/img/icons8-more-52.png" alt=""></p><!--USERNAME & USER_ID -->
+                            
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusantium id magnam, aspernatur amet laudantium, aperiam laborum libero veniam odit dolorem eius numquam illo debitis, molestiae facere vel ex totam?</p><!--POST TEXT -->
+                            
+                            <div  class="post_interactions"><!--POST interactions CONTAINER (likes, comments, retweets, impressions, share)-->
+                                <img class="post-icon" src="/img/icons8-speech-bubble-52.png" alt="comments icon">
+                                <img class="post-icon" src="/img/icons8-retweet-52.png" alt="retweet icon">
+                                <img class="post-icon" src="/img/icons8-love-52.png" alt=" like icon">
+                                <img class="post-icon" src="/img/icons8-futures-24.png" alt="impression icon">
+                                <img class="post-icon" src="/img/icons8-upload-52.png" alt="share icon">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tweet-section"><!--FIFTH POST -->
+                    <div class="post-container"><!--FLEX Container for posters prfile pic and POSts -->
+                        <div class="poster-image-container"><!-- Container for profile pic -->
+                            <img class="profile-pic" src="/img/pexels-anna-shvets-5069393.jpg" alt="user profile pic"><!--  profile pic -->
+                        </div>
+    
+                        <div class="post-details"><!-- Container for poster Username and user-id and POSts -->
+                            <p class="user-name poster-id">Saliu_codes <span class="user-id">   @Saliu_codes . 23min</span><img class="post-icon"  src="/img/icons8-more-52.png" alt=""></p><!--USERNAME & USER_ID -->
+                            
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusantium id magnam, aspernatur amet laudantium, aperiam laborum libero veniam odit dolorem eius numquam illo debitis, molestiae facere vel ex totam?</p><!--POST TEXT -->
+                            
+                            <div  class="post_interactions"><!--POST interactions CONTAINER (likes, comments, retweets, impressions, share)-->
+                                <img class="post-icon" src="/img/icons8-speech-bubble-52.png" alt="comments icon">
+                                <img class="post-icon" src="/img/icons8-retweet-52.png" alt="retweet icon">
+                                <img class="post-icon" src="/img/icons8-love-52.png" alt=" like icon">
+                                <img class="post-icon" src="/img/icons8-futures-24.png" alt="impression icon">
+                                <img class="post-icon" src="/img/icons8-upload-52.png" alt="share icon">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+
+
+
+        <aside class="left-column columns"><!-- left aside(trending, who-to-follow) pane -->
+            <header class="left-column-header"><!-- left-column header --> 
+
+                    <img class="post-icon" src="/img/icons8-search-52.svg" alt="search icon"> <!-- left-column search bar icon --> 
+                    <input type="search" name="Search" id="Search" placeholder="Search"><!--  left-column search bar  --> 
+            </header>
+
+            <article class="components_container"><!-- component container -->
+
+                <div class="Subcribtion_component component"> <!--  SUBSCRIBTION component --> 
+                    <p class="component-title">Subscribe to premium</p>
+                    <p class="component-sub-title">Subscribe to unlock new features and if eligible, receive a share of ads revenue.</p>
+                    <button class="btn subcribe-btn">Subscribe</button>
+                </div>
+    
+                <div class="spaces_component component"> <!--  SPACES component -->
+                    <p class="component-title">Listen live in Spaces</p>
+                    <div class="ongoing_space">
+                        <div class="post-container space_host-container"><!--FLEX Container for posters prfile pic and POSts -->
+                            <div class="space-host-pic-wrapper poster-image-container"><!-- Container for profile pic -->
+                                <img class="space-host profile-pic" src="/img/Snapchat-1223280961.jpg" alt="user profile pic"><!--  profile pic -->
+                            </div>
+                            <div class="space-host-status post-details"><!-- Container for poster Username and user-id and POSts -->
+                                <p>Ronald weasly <span>is hosting</span></p><!--USERNAME & USER_ID -->
+                            </div>
+                        </div>
+                        <div class="live-sapces">
+                            <div class="space-topic">
+                               <p class="component-sub-title">
+                                The State of web Development in Nigeria? Will A.I take our jobs?
+                               </p> 
+                            </div>
+                            <div class="other-spaces">
+                                <img class="space-host other-host profile-pic" src="/img/base.jpg" alt="user profile pic">
+    
+                                <img class="space-host other-host profile-pic" src="/img/Citrus background.jpg" alt="user profile pic">
+    
+                                <img class="space-host other-host profile-pic" src="/img/Snapchat-1223280961.jpg" alt="user profile pic">
+                                
+                                <div class="glow"></div>
+                                <div class="glow glow-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trending_component component"><!--  TRENDING component -->
+                    <p class="component-title">Trends for you</p>
+                    <div class="trending-topic">
+                        <div>
+                            <p class="grey-words">Music · Trending</p>
+                            <p class="component-sub-title">Davido</p>
+                            <p class="grey-words">17.7K posts</p>
+                        </div>
+                        <img class="post-icon" src="/img/icons8-more-52.png" alt="more icon">
+                    </div>
+
+                    <div class="trending-topic">
+                        <div>
+                            <p class="grey-words">Music · Trending</p>
+                            <p class="component-sub-title">#Justice4Mohbad</p>
+                            <p class="grey-words">109k posts</p>
+                        </div>
+                        <img class="post-icon" src="/img/icons8-more-52.png" alt="more icon">
+                    </div>
+
+                    <div class="trending-topic">
+                        <div>
+                            <p class="grey-words">Tech · Trending</p>
+                            <p class="component-sub-title">Javascript</p>
+                            <p class="grey-words">3k posts</p>
+                        </div>
+                        <img class="post-icon" src="/img/icons8-more-52.png" alt="more icon">
+                    </div>
+
+                    <div class="trending-topic">
+                        <div>
+                            <p class="grey-words">Tech · Trending</p>
+                            <p class="component-sub-title trend-title">#100days0fcodeChallenge</p>
+                            <p class="grey-words">8k posts</p>
+                        </div>
+                        <img class="post-icon" src="/img/icons8-more-52.png" alt="more icon">
+                    </div>
+                    <p class="blue-words">Show more</p>
+                </div>
+                 
+                
+                <div class="who_to_follow_component component"><!-- WHO_TO_FOLLOW component -->
+                    <p class="component-title">Who To Follow</p>
+                    
+                    <article class="suggested_follows"><!-- User-Profile-info wrapper  -->
+                        <div class="follow_id_wrapper">
+                            <img class="profile-pic follower_pic" src="/img/pexels-esranur-kalay-8368409.jpg" alt="user profile picture">
+                            <div class="follow_id">
+                                 <p>Snowy <span class="grey-words">@Headwig</span></p>
+                            </div>
+                        </div>
+                        <button class="btn follow_btn">follow</button> <!--post tweet button -->
+                    </article>
+
+                    <article class="suggested_follows"><!-- User-Profile-info wrapper  -->
+                        <div class="follow_id_wrapper">
+                            <img class="profile-pic follower_pic" src="/img/pexels-anna-shvets-5069393.jpg" alt="user profile picture">
+                            <div class="follow_id">
+                                 <p>Navile <span class="grey-words">@longbottom</span></p>
+                            </div>
+                        </div>
+                        <button class="btn follow_btn">follow</button> <!--post tweet button -->
+                    </article>
+
+                    <article class="suggested_follows"><!-- User-Profile-info wrapper  -->
+                        <div class="follow_id_wrapper">
+                            <img class="profile-pic follower_pic" src="/img/pexels-ketut-subiyanto-4349842.jpg" alt="user profile picture">
+                            <div class="follow_id">
+                                 <p>Draco <span class="grey-words">@mr_malfoy</span></p>
+                            </div>
+                        </div>
+                        <button class="btn follow_btn">follow</button> <!--post tweet button -->
+                    </article>
+
+                    <p class="blue-words">Show more</p>
+                </div>
+                
+                <footer class="footer">
+    
+                </footer>
+            </article>
+        </aside> 
+    </div><!-- Main container end -->
+</body>
+</html>
