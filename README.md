@@ -27,11 +27,11 @@ check it out [here](https://twieterclone.netlify.app/)
 *2nd screenshot at Full screen*
 
 ### Screenshot 3
-![Home page](/img/screenshot-twieterclone.netlify.app-md.png)
+![Medium window](/img/screenshot-twieterclone.netlify.app-md.png)
 *a screenshot at medium browser window*
 
 ### Screenshot 4
-![About Page](/img/screenshot-twieterclone.netlify.app-sm.png)
+![Smaller Window](/img/screenshot-twieterclone.netlify.app-sm.png)
 *a screenshot at small browser window*
 
 ## 3. Why I built this :hammer:
